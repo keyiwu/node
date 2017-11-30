@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>跨域请求</title>
+
+
+</head>
+
+<body>
+	<h1>浏览器允许的跨域请求的三种方式</h1>
+	<button id="btn">点击</button>
+	<!-- 
+		1.img
+		2.script
+		3.link
+
+	 -->
+	<!-- <img src="https://www.baidu.com/img/bd_logo1.png"> -->
+	<script type="text/javascript">
+		btn.onclick = function () {
+
+			var s = document.createElement("script");
+			s.async = true;
+			s.src = "http://localhost/web/nodejs/day01/kua.php";
+			document.head.appendChild(s);
+			
+		}
+		function doResponse(data) {
+				console.log(data);
+			}
+
+	</script>
+
+
+</body>
+
+</html>
